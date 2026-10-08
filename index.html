@@ -384,80 +384,55 @@
         </section>
 
         <!-- Formulario -->
-        <section class="bg-light pb-5">
-            <div class="container  mt-5 pt-2" id="contato">
-                <!-- Titulo -->
-                <div class="text-center">
-                    <h2 class="mt-5 fw-bold">Entre em Contato</h2>
-                    <p class="text-secondary">Envie sua dúvida para nossa equipe.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-6">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Entre com o seu nome completo">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="nome@email.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Telefone</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="(XX)X XXXX-XXXX">
-                        </div>
+       <section class="pb-5"id="contatos">
+           <div class="container mt-5 pt-2" id="contato">
+               <!-- Titulo -->
+               <div class="text-center">
+                   <h2  class="mt-5 fw-bold">Entre em Contato</h2>
+                   <p class="text-secondary">Envie sua dúvida para nossa equipe.</p>
+               </div>
+ 
+               <div  class="row justify-content-center tec">
+                   <div  class="col-12 col-md-6">
+                       <form action="cadastroContato.php" method="POST">
+                           <div  class="mb-3">
+                               <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                               <input type="text"name="nome" class="form-control"id="nome"
+                                   placeholder="Entre com o seu nome completo" required>
+                           </div>
+                           <div class="mb-3">
+                               <label for="exampleFormControlInput1" class="form-label">Email</label>
+                               <input type="text"name="email" class="form-control"id="email"
+                                   placeholder="nome@email.com"required>
+                           </div>
+                           <div class="mb-3">
+                               <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+                               <input type="number"name="telefone" class="form-control"id="telefone"
+                                   placeholder="(34) 99999-9999" required>
+                           </div>
+ 
+                           <label for="exampleFormControlInput1" class="form-label">Dúvidas</label>
+                           <select name="assunto"id="assunto" class="form-select">
+                               <option value="Produto">Dúvida sobre produto</option>
+                               <option value="Entrega">Entrega</option>
+                               <option value="Pagamento">Pagamento</option>
+                           </select>
+ 
+                           <div class="mb-3">
+                               <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                               <textarea class="form-control"id="mensagem"name="mensagem"rows="3"required></textarea>
+                           </div>
+ 
+                           <button class="btn btn-success w-100 ">
+                               <i class="bi bi-send me-2"></i>
+                               Enviar mensagem
+                           </button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-                        <label for="exampleFormControlInput1" class="form-label">Dúvidas</label>
-                        <select name="" id="" class="form-select">
-                            <option> Dúvida sobre produto</option>
-                            <option> Entrega</option>
-                            <option> Pagamento</option>
-                        </select>
-
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-
-                        <button class="btn btn-success w-50 ">
-                            <i class="bi bi-send "></i>
-                            Enviar mensagem
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Fale com a verde viva -->
-        <section class="bg-success text-white text-center py-5">
-            <div class="container">
-                <h2 class="fw-bold">
-                    Fale com a VerdeViva
-                </h2>
-                <p>
-                    Faça seu pedido ou acompanhe
-                    nossas novidades nas redes sociais.
-                </p>
-                <div class="d-flex
-                       justify-content-center
-                       flex-wrap
-                       gap-2">
-                    <!-- WHATSAPP -->
-                    <a href="https://wa.me/5534999999999?text=Olá%20gostaria%20de%20conhecer%20os%20produtos%20da%20VerdeViva"
-                        target="_blank" class="btn btn-light">
-                        <i class="bi bi-whatsapp"></i>
-                        WhatsApp
-                    </a>
-                    <!-- INSTAGRAM -->
-                    <a href="https://www.instagram.com/nomedoperfil/" target="_blank" class="btn btn-dark">
-                        <i class="bi bi-instagram"></i>
-                        Instagram
-                    </a>
-                </div>
-            </div>
-        </section>
     </main>
     <!-- Footer - Rodapé -->
     <footer class="bg-dark text-white pt-4">
