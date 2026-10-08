@@ -5,7 +5,8 @@ $conexao = mysqli_connect(
     "localhost",
     "root",
     "",
-    "verdeViva"
+    "verdeViva",
+    3307
 );
 
 if(!$conexao){
